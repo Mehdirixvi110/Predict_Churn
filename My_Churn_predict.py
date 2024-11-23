@@ -6,11 +6,11 @@ import dill
 from sklearn.pipeline import Pipeline
 
 # Load the pretrained model
-with open("G:/Data analysis/pipeline.pkl", "rb") as file:
+with open("pipeline.pkl", "rb") as file:
     model = dill.load(file)
 
 # Load the feature dictionary
-with open("G:/Data analysis/my_feature_dict.pkl", "rb") as file:
+with open("my_feature_dict.pkl", "rb") as file:
     my_feature_dict = joblib.load(file)
 
 # Function to predict churn
@@ -219,7 +219,7 @@ elif selected_page == "About Us":
             return base64.b64encode(img_file.read()).decode()
 
     # Encode your profile picture
-    profile_pic_base64 = encode_image_to_base64("G:/Data analysis/My profile picture professional.jpeg")
+    profile_pic_base64 = encode_image_to_base64("My profile picture professional.jpeg")
 
     st.markdown("### About Us 🛠️")
     st.markdown(
